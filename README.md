@@ -26,4 +26,4 @@ changing icons, and colour transitions — all driven by TweenAnimationBuilder.
 | `curve` | Controls the speed shape — `Curves.easeInOut` starts slow, speeds up, then eases to a stop |
 
 ## Screenshot
-![App Screenshot](screenshot.png)
+<img width="451" height="984" alt="Screenshot 2026-06-23 134642" src="https://github.com/user-attachments/assets/93850da3-a995-43cf-8d60-1bbeedb1c590" />
