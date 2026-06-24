@@ -27,7 +27,7 @@ class OrderTrackerPage extends StatefulWidget {
 
 class _OrderTrackerPageState extends State<OrderTrackerPage> {
 
-  // Each stage has a progress value, colour, icon, and label
+
   final List<Map<String, dynamic>> _stages = [
     {
       'label': 'Order Placed',
@@ -57,7 +57,6 @@ class _OrderTrackerPageState extends State<OrderTrackerPage> {
 
   int _currentStage = 0;
 
-  // These are the values TweenAnimationBuilder animates BETWEEN
   double _targetProgress = 0.0;
   Color _targetColor = Colors.grey;
 
@@ -117,30 +116,17 @@ class _OrderTrackerPageState extends State<OrderTrackerPage> {
 
               const SizedBox(height: 48),
 
-              // ══════════════════════════════════════════════
-              // TWEEN ANIMATION BUILDER — ANIMATES THE RING
-              // ══════════════════════════════════════════════
               TweenAnimationBuilder<double>(
 
                 // PROPERTY 1: tween
-                // Defines the START and END values to animate between.
-                // The builder always animates from its current position
-                // to the new 'end' value whenever end changes.
                 tween: Tween<double>(begin: 0.0, end: _targetProgress),
 
                 // PROPERTY 2: duration
-                // How long the animation takes to complete.
-                // 800ms feels smooth — try 3000ms to see it crawl.
                 duration: const Duration(milliseconds: 800),
 
-                // PROPERTY 3: curve
-                // Controls the speed shape of the animation.
-                // easeInOut starts slow, speeds up, then slows at the end.
-                // Try Curves.linear or Curves.bounceOut to see the difference.
+                // PROPERTY 3: curve               
                 curve: Curves.easeInOut,
 
-                // builder fires on every animation frame with the
-                // current interpolated value between begin and end
                 builder: (context, double value, child) {
                   return SizedBox(
                     width: 220,
@@ -190,7 +176,6 @@ class _OrderTrackerPageState extends State<OrderTrackerPage> {
                   );
                 },
               ),
-              // ══════════════════════════════════════════════
 
               const SizedBox(height: 48),
 
