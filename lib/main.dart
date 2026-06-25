@@ -113,7 +113,7 @@ class _OrderTrackerPageState extends State<OrderTrackerPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
+              
               const SizedBox(height: 48),
 
               TweenAnimationBuilder<double>(
@@ -135,7 +135,6 @@ class _OrderTrackerPageState extends State<OrderTrackerPage> {
                       alignment: Alignment.center,
                       children: [
 
-                        // Progress ring drawn with CircularProgressIndicator
                         SizedBox(
                           width: 220,
                           height: 220,
